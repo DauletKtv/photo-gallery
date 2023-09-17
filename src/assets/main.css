@@ -1,0 +1,214 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+.images_block {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(473px, 1fr));
+	gap: 28px;
+	max-width: 1479px;
+	justify-content: center;
+	margin: 0 auto;
+  }
+  
+  .image_block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+  }
+  
+  .images_block > .image_block > img {
+	max-width: 100%; 
+	height: auto; 
+	width: 473px;
+	height: 440px;
+	object-fit: cover;
+  }
+  .search-form {
+	max-width: 1920px;
+	height: 253px;
+	background-image: url("/davinci.png");
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+  }
+  .search-form::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgb(0 0 0 / 65%);
+  }
+  .search-form_input {
+	width: 866px;
+	background-color: white;
+	height: 70px;
+	z-index: 1;
+	padding: 21px 39px;
+	color: #000;
+	font-family: Roboto;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	position: relative;
+  }
+  
+  .search-form_wrap {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+  }
+  .search-form_icon {
+	position: absolute;
+	right: 34px;
+	z-index: 3;
+  }
+  .main__wrap {
+	padding: 129px 0 99px 0;
+  }
+  .footer {
+  }
+  .footer__controls {
+	display: flex;
+	align-items: center;
+	padding: 71px 113px;
+	justify-content: flex-end;
+  }
+  .icon-loader {
+	margin: 0 auto;
+	animation: rotate 2s linear infinite;
+	width: 30px;
+	height: 30px;
+  }
+  .icon-up {
+	width: 49px;
+	height: 49px;
+  }
+  @keyframes rotate {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+
+  @media (max-width: 700px) {
+	.images_block > .image_block > img{
+		width: 65vw;
+		height: 65vw;
+	}
+	.search-form{
+		height: 230px;
+	}
+	.search-form_input{
+		width: 65vw;
+	}
+	.icon-up{
+		display: none;
+	}
+	.search-form_input{
+		font-size: 24px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+	}
+	.main__wrap{
+		padding-top: 50px;
+	}
+  }
