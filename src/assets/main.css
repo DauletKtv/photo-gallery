@@ -189,6 +189,9 @@ body{
   }
 
   @media (max-width: 700px) {
+	html{
+		overflow-x: hidden;
+	}
 	.images_block > .image_block > img{
 		width: 65vw;
 		height: 65vw;
